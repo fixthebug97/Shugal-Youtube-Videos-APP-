@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+android:id="@+id/layout"
+        >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/videos"
+           android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/icon"
+            />
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:src="@drawable/title"
+            android:layout_marginTop="15dp"
+          android:layout_toRightOf="@+id/icon"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/titleicon"
+
+            />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/titleicon"
+            android:layout_toLeftOf="@id/search"
+            android:textAlignment="center"
+            android:hint="search videos"
+            android:id="@+id/videoText"
+            android:layout_marginTop="10dp"
+            />
+        <Button
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/saerch"
+            android:layout_marginRight="30dp"
+            android:id="@+id/search"
+
+            />
+
+
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/myRecyclerView"
+        android:layout_below="@+id/layout"
+
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+</LinearLayout>

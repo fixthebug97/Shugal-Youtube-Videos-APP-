@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splahScreen">
+
+    <fragment
+        android:id="@+id/splahScreen"
+        android:name="com.example.youtube.SplahScreen"
+        android:label="splash_screen"
+        tools:layout="@layout/splash_screen" >
+        <action
+            android:id="@+id/action_splahScreen_to_searchVideos"
+            app:destination="@id/searchVideos"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchVideos"
+        android:name="com.example.youtube.SearchVideos"
+        android:label="search"
+        tools:layout="@layout/search" >
+        <action
+            android:id="@+id/action_searchVideos_to_playVideo"
+            app:destination="@id/playVideo" />
+        <argument android:name="videoID" />
+        <argument android:name="listVideos" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/playVideo"
+        android:name="com.example.youtube.PlayVideo"
+        android:label="play_video"
+        tools:layout="@layout/play_video" />
+</navigation>
